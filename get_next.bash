@@ -10,8 +10,8 @@ fi
 file=`ls -t $1 | tail -n 1`;
 if [[ "$file" != "" ]]; then
     newfile="_$file"
-    mv "$1/$file" "$1/$newfile"
-    echo `realpath "$1/$newfile"`
+    mv "$1/$file" "/var/tmp/$newfile"
+    echo `realpath "/var/tmp/$newfile"`
     exit 0
 else
     exit 1
